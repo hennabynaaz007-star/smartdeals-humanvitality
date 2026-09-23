@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HUMANVITALITY — Health & Wellness</title>
+<meta name="description" content="HUMANVITALITY — practical health, wellness, nutrition, baby care, skin, hair and dental guides.">
+<style>
+:root{--bg:#f6fbfa;--card:#fff;--ink:#18312d;--muted:#667773;--a:#10a37f;--b:#5b5be7;--c:#ff8b6b;--line:#e3eeeb;--shadow:0 16px 45px rgba(24,49,45,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
+a{text-decoration:none;color:inherit}.top{background:linear-gradient(90deg,#123d35,#5b5be7);color:#fff;text-align:center;padding:9px 14px;font-size:13px;font-weight:600}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{max-width:1180px;margin:auto;padding:15px 20px;display:flex;align-items:center;gap:24px}.brand{font-size:23px;font-weight:900;letter-spacing:.8px}.brand span{color:var(--a)}
+.links{margin-left:auto;display:flex;gap:18px;font-size:14px;font-weight:700}.links a:hover{color:var(--a)}
+.menu{display:none;border:0;background:#eef7f4;border-radius:12px;padding:9px}
+.hero{max-width:1180px;margin:35px auto;padding:0 20px}.heroBox{position:relative;overflow:hidden;border-radius:30px;padding:52px 48px;background:linear-gradient(120deg,#e4faf3 0%,#eef0ff 55%,#fff0eb 100%);box-shadow:var(--shadow)}
+.heroBox:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;top:-100px;background:rgba(255,255,255,.55)}
+.badge{display:inline-block;background:#fff;border:1px solid #d9ebe6;padding:8px 13px;border-radius:999px;font-size:12px;font-weight:800;color:var(--a)}
+h1{font-size:clamp(36px,6vw,66px);line-height:.98;margin:18px 0 15px;max-width:720px;letter-spacing:-2px}.hero p{font-size:17px;color:var(--muted);max-width:650px;line-height:1.7}
+.search{margin-top:25px;display:flex;max-width:650px;background:#fff;padding:7px;border-radius:16px;box-shadow:0 8px 25px rgba(24,49,45,.08)}.search input{flex:1;border:0;outline:0;padding:13px;font-size:15px}.search button,.btn{border:0;background:linear-gradient(135deg,var(--a),#087e67);color:#fff;padding:13px 19px;border-radius:12px;font-weight:800;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}.sectionHead{display:flex;justify-content:space-between;align-items:end;margin:38px 0 17px}.sectionHead h2{margin:0;font-size:27px}.sectionHead span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.cat{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:20px;transition:.25s;box-shadow:0 6px 20px rgba(24,49,45,.04)}.cat:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.ico{font-size:30px}.cat b{display:block;margin-top:11px}.cat small{color:var(--muted);line-height:1.5}
+.content{display:grid;grid-template-columns:1.8fr 1fr;gap:22px}.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:25px;box-shadow:0 8px 28px rgba(24,49,45,.05)}.post{padding:17px 0;border-bottom:1px solid var(--line)}.post:last-child{border:0}.post h3{margin:5px 0 7px;font-size:19px}.tag{font-size:11px;color:var(--a);font-weight:900;text-transform:uppercase;letter-spacing:.6px}.post p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.tip{background:linear-gradient(135deg,#173f37,#514fd0);color:#fff;border-radius:24px;padding:26px;box-shadow:var(--shadow)}.tip p{color:#dfe8e6;line-height:1.7;font-size:14px}.tip button{background:#fff;color:#173f37;border:0;padding:11px 15px;border-radius:11px;font-weight:800}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0 50px}.feature{background:#fff;border:1px solid var(--line);border-radius:20px;padding:21px}.feature h3{margin:8px 0}.feature p{color:var(--muted);font-size:14px;line-height:1.6}
+footer{background:#122e29;color:#d9e7e3;padding:35px 20px;margin-top:30px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px}.foot small{color:#9eb4ae}
+@media(max-width:800px){.links{display:none}.menu{display:block;margin-left:auto}.grid{grid-template-columns:repeat(2,1fr)}.content,.features{grid-template-columns:1fr}.heroBox{padding:34px 25px}h1{letter-spacing:-1px}.foot{display:block}.search button{padding:11px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr}.cat{padding:17px}.navin{padding:12px 16px}.hero{margin-top:20px}.heroBox{border-radius:23px}.search{display:block;background:transparent;box-shadow:none}.search input,.search button{width:100%;margin-top:7px;background:#fff;border-radius:12px}.search button{background:var(--a);color:#fff}}
+
+.tailorHero{margin-top:38px;border-radius:28px;padding:32px;background:linear-gradient(135deg,#fff0f7,#eef0ff 55%,#e9fff7);border:1px solid #eadff0;box-shadow:var(--shadow)}.tailorHero h2{margin:0 0 8px;font-size:30px}.tailorHero p{color:var(--muted);line-height:1.7;margin:0;max-width:780px}.tailorGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.tailorCard{background:#fff;border:1px solid #eadff0;border-radius:22px;padding:22px;box-shadow:0 8px 25px rgba(91,91,231,.07);transition:.25s}.tailorCard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.tailorIcon{font-size:34px}.tailorCard h3{margin:9px 0 7px}.tailorCard p{color:var(--muted);font-size:14px;line-height:1.6}.measure{margin-top:24px;background:linear-gradient(135deg,#173f37,#5b5be7);color:#fff;border-radius:24px;padding:25px}.measure h3{margin-top:0}.measureGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.measureItem{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:15px;padding:13px}.measureItem b{display:block}.measureItem small{color:#e8edf0;line-height:1.4}.cuttingNote{margin:18px 0 50px;background:#fff8e9;border:1px solid #f3dfad;border-radius:20px;padding:18px;color:#66552a;line-height:1.6;font-size:14px}
+@media(max-width:800px){.tailorGrid{grid-template-columns:1fr 1fr}.measureGrid{grid-template-columns:1fr 1fr}}@media(max-width:480px){.tailorGrid{grid-template-columns:1fr}.measureGrid{grid-template-columns:1fr 1fr}}
+</style>
+
+<style>
+.tailoring{margin-top:45px}.tailorHero{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:30px;border-radius:26px;background:linear-gradient(120deg,#fff0f7,#eef0ff,#e7fff6);box-shadow:var(--shadow);margin-bottom:18px}.tailorHero h2{margin:12px 0 8px;font-size:30px}.tailorHero p{color:var(--muted);line-height:1.7}.tape{min-width:110px;height:110px;border-radius:50%;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#ff8b6b,#5b5be7);color:#fff;font-size:35px;font-weight:900;box-shadow:0 12px 30px rgba(91,91,231,.22)}.tape small{font-size:9px;line-height:1.2}.tailorGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 25px rgba(24,49,45,.05);transition:.25s}.tcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.ticon{font-size:34px}.tcard h3{margin:8px 0 12px}.tcard p{color:var(--muted);font-size:13px;line-height:1.65;margin:8px 0}.tcard b{color:var(--ink)}.measurePanel{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:25px}.measurePanel h3{margin-top:0}.measureGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.measureGrid span{padding:12px;border-radius:12px;background:linear-gradient(135deg,#f0fff9,#f3f2ff);font-weight:700;font-size:13px}.note,.tailorNote{color:var(--muted);line-height:1.7;font-size:13px}.cutSteps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:20px 0}.cutSteps div{background:linear-gradient(145deg,#fff,#f3f8ff);border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}.cutSteps b{display:grid;place-items:center;width:35px;height:35px;margin:0 auto 8px;border-radius:50%;background:var(--b);color:#fff}.cutSteps span,.cutSteps small{display:block}.cutSteps span{font-weight:900}.cutSteps small{color:var(--muted);margin-top:5px;font-size:11px;line-height:1.4}.tailorNote{background:#fff8e9;border:1px solid #f3dfae;border-radius:16px;padding:14px}@media(max-width:800px){.tailorGrid{grid-template-columns:1fr 1fr}.measureGrid{grid-template-columns:repeat(2,1fr)}.cutSteps{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.tailorHero{display:block}.tape{margin-top:18px}.tailorGrid{grid-template-columns:1fr}.cutSteps{grid-template-columns:1fr}.measureGrid{grid-template-columns:1fr 1fr}}
+</style>
+
+</head>
+<body>
+<div class="top">🌿 HUMANVITALITY · Practical health & wellness, made simple</div>
+<nav><div class="navin">
+  <a class="brand" href="#">HUMAN<span>VITALITY</span></a>
+  <div class="links"><a href="#topics">Topics</a><a href="#popular">Popular</a><a href="#tailoring">Tailoring</a><a href="#tools">Health Tools</a><a href="#tailoring">Tailoring</a><a href="#about">About</a></div>
+  <button class="menu" onclick="document.querySelector('.links').classList.toggle('show')">☰</button>
+</div></nav>
+
+<header class="hero"><div class="heroBox">
+<span class="badge">✨ YOUR EVERYDAY HEALTH HUB</span>
+<h1>Better health starts with better information.</h1>
+<p>Explore easy-to-understand health, nutrition, wellness, baby care, skin, hair and dental guides — all in one modern place.</p>
+<div class="search"><input id="q" placeholder="Search health topics…"><button onclick="searchSite()">Search</button></div>
+</div></header>
+
+<main class="wrap">
+<section id="topics"><div class="sectionHead"><h2>Explore by topic</h2><span>Choose what you need</span></div>
+<div class="grid">
+<a class="cat" href="#"><div class="ico">❤️</div><b>Heart & BP</b><small>Everyday cardiovascular wellness</small></a>
+<a class="cat" href="#"><div class="ico">👶</div><b>Baby & Kids</b><small>Care, nutrition & development</small></a>
+<a class="cat" href="#"><div class="ico">🌿</div><b>Natural Wellness</b><small>Healthy lifestyle ideas</small></a>
+<a class="cat" href="#"><div class="ico">💆</div><b>Skin & Hair</b><small>Care guides & routines</small></a>
+<a class="cat" href="#"><div class="ico">🦷</div><b>Dental Care</b><small>Oral health basics</small></a>
+<a class="cat" href="#"><div class="ico">🥗</div><b>Nutrition</b><small>Food & healthy habits</small></a>
+<a class="cat" href="#"><div class="ico">🧠</div><b>Wellness</b><small>Mind-body wellbeing</small></a>
+<a class="cat" href="#"><div class="ico">📚</div><b>Health Guides</b><small>Simple explainers</small></a>
+</div></section>
+
+<section id="popular"><div class="sectionHead"><h2>Popular & useful</h2><span>Featured reading</span></div>
+<div class="content">
+<div class="panel" id="articleList">
+  <article class="post"><span class="tag">Featured guide</span><h3>Understanding everyday health symptoms</h3><p>Simple educational information to help readers understand common health topics and know when professional advice may be needed.</p></article>
+  <article class="post"><span class="tag">Wellness</span><h3>Healthy habits that fit real life</h3><p>Practical lifestyle ideas presented in short, easy-to-follow formats.</p></article>
+  <article class="post"><span class="tag">Family health</span><h3>Family-friendly health resources</h3><p>Browse useful guides for parents, families and everyday wellbeing.</p></article>
+</div>
+<aside class="tip"><div style="font-size:30px">💡</div><h2>Health Tip of the Day</h2><p>Use this space for a rotating daily tip, seasonal reminder or featured article from your HUMANVITALITY blog.</p><button onclick="dailyTip()">Show today's tip</button><p id="tipText" style="font-weight:700"></p></aside>
+</div></section>
+
+
+<section id="tailoring">
+  <div class="tailorHero">
+    <span class="badge">✂️ DESIGN • MEASURE • CUT • STITCH</span>
+    <h2>Tailoring & Designer Dress Studio</h2>
+    <p>Original, easy-to-browse tailoring guides with measurement references, cutting notes and stitching flow. This section is designed as an educational guide; measurements should always be adjusted to the wearer and fabric.</p>
+  </div>
+  <div class="tailorGrid">
+    <article class="tailorCard"><div class="tailorIcon">👗</div><h3>Kurti & Kameez</h3><p>Length, shoulder, bust, waist, hip, armhole, sleeve and neck measurement references, followed by basic cutting and stitching order.</p></article>
+    <article class="tailorCard"><div class="tailorIcon">💃</div><h3>Anarkali & Gown</h3><p>Full-length garment planning, flare sections, bodice measurements, sleeve options and a clean construction sequence.</p></article>
+    <article class="tailorCard"><div class="tailorIcon">👚</div><h3>Blouse</h3><p>Core blouse measurements, neckline and sleeve references, seam allowance reminders and fitting checkpoints.</p></article>
+    <article class="tailorCard"><div class="tailorIcon">🩳</div><h3>Salwar & Pants</h3><p>Waist, hip, rise, length and leg-opening references with basic drafting and stitching guidance.</p></article>
+    <article class="tailorCard"><div class="tailorIcon">✨</div><h3>Sharara & Gharara</h3><p>Panel planning, flare, waist fitting and finishing ideas for festive and designer silhouettes.</p></article>
+    <article class="tailorCard"><div class="tailorIcon">🧒</div><h3>Kids Wear</h3><p>Simple measurement tables and construction references for common children's dresses and comfortable fits.</p></article>
+  </div>
+  <div class="measure">
+    <h3>📏 Universal Measurement Checklist</h3>
+    <div class="measureGrid">
+      <div class="measureItem"><b>Shoulder</b><small>Across shoulder point to point</small></div>
+      <div class="measureItem"><b>Bust</b><small>Fullest circumference</small></div>
+      <div class="measureItem"><b>Waist</b><small>Natural waist circumference</small></div>
+      <div class="measureItem"><b>Hip</b><small>Fullest hip circumference</small></div>
+      <div class="measureItem"><b>Length</b><small>Shoulder/high point to desired hem</small></div>
+      <div class="measureItem"><b>Armhole</b><small>Use the garment's intended fit</small></div>
+      <div class="measureItem"><b>Sleeve</b><small>Shoulder to desired sleeve end</small></div>
+      <div class="measureItem"><b>Neck</b><small>Neckline style and depth</small></div>
+    </div>
+  </div>
+  <div class="cuttingNote">💡 <b>Cutting rule:</b> Record body measurements first, decide the intended ease and design, then add seam/hem allowances appropriate to the garment. Always make a paper or fabric test for a new design before cutting expensive fabric.</div>
+</section>
+
+<section id="tools"><div class="sectionHead"><h2>Coming soon: Health Tools</h2><span>Interactive features</span></div>
+<div class="features">
+<div class="feature">🔎<h3>Health Topic Finder</h3><p>Let visitors choose symptoms/topics and quickly discover relevant educational articles.</p></div>
+<div class="feature">📩<h3>Weekly Vitality</h3><p>Email signup area for new articles, healthy-living tips and featured guides.</p></div>
+<div class="feature">🛍️<h3>Recommended Products</h3><p>A dedicated, clearly disclosed affiliate section for useful wellness products.</p></div>
+</div></section>
+
+
+<section id="tailoring" class="tailoring">
+  <div class="sectionHead">
+    <h2>✂️ Tailoring & Designer Dress Studio</h2>
+    <span>Measurements · Cutting · Stitching</span>
+  </div>
+
+  <div class="tailorHero">
+    <div>
+      <span class="badge">✨ ORIGINAL TAILORING GUIDE</span>
+      <h2>Measure smart. Cut neatly. Stitch beautifully.</h2>
+      <p>Practical garment measurements, cutting notes and stitching checkpoints in one colorful guide.</p>
+    </div>
+    <div class="tape">📏<br><small>MEASURE<br>WITH CARE</small></div>
+  </div>
+
+  <div class="tailorGrid">
+    <article class="tcard">
+      <div class="ticon">👗</div><h3>Kurti / Kameez</h3>
+      <p><b>Measure:</b> full length, shoulder, bust, waist, hip, armhole, sleeve length and neck depth.</p>
+      <p><b>Cut:</b> mark the centre line first, then shoulder, armhole and side shaping; add seam allowance consistently.</p>
+      <p><b>Stitch:</b> join shoulder → finish neckline → attach sleeves → close sides → hem.</p>
+    </article>
+    <article class="tcard">
+      <div class="ticon">🌸</div><h3>Anarkali / Gown</h3>
+      <p><b>Measure:</b> bodice length, bust, waist, shoulder, armhole, sleeve and desired flare/length.</p>
+      <p><b>Cut:</b> divide the flare evenly across panels; mark grainline and matching points before cutting.</p>
+      <p><b>Stitch:</b> assemble bodice → join panels → attach sleeves → finish neckline → hem.</p>
+    </article>
+    <article class="tcard">
+      <div class="ticon">👚</div><h3>Blouse</h3>
+      <p><b>Measure:</b> bust, under-bust, shoulder, armhole, blouse length, front/back neck and sleeve.</p>
+      <p><b>Cut:</b> draft front/back separately; mark darts/princess shaping and keep matching notches.</p>
+      <p><b>Stitch:</b> darts/panels → shoulders → neckline finish → sleeves → side seams → hooks/zip.</p>
+    </article>
+    <article class="tcard">
+      <div class="ticon">🩳</div><h3>Salwar / Churidar</h3>
+      <p><b>Measure:</b> waist, hip, rise, full length, thigh, calf/ankle and desired bottom opening.</p>
+      <p><b>Cut:</b> use the measured rise and leg width; keep sufficient seam allowance and grain direction.</p>
+      <p><b>Stitch:</b> join leg seams → crotch/rise → waistband → bottom finish.</p>
+    </article>
+    <article class="tcard">
+      <div class="ticon">💃</div><h3>Sharara / Gharara</h3>
+      <p><b>Measure:</b> waist, hip, rise, length and flare; decide panel width according to the design.</p>
+      <p><b>Cut:</b> divide flare into symmetrical panels and label every panel before cutting.</p>
+      <p><b>Stitch:</b> join panels carefully → attach waistband → finish hems and decorative layers.</p>
+    </article>
+    <article class="tcard">
+      <div class="ticon">🧒</div><h3>Kids Wear</h3>
+      <p><b>Measure:</b> chest, shoulder, armhole, waist, length and sleeve; allow comfortable movement.</p>
+      <p><b>Cut:</b> keep simple shapes, clearly mark front/back and use safe seam finishes.</p>
+      <p><b>Stitch:</b> assemble main body → neckline → sleeves → side seams → hem.</p>
+    </article>
+  </div>
+
+  <div class="measurePanel">
+    <h3>📐 Measurement Checklist</h3>
+    <div class="measureGrid">
+      <span>Shoulder</span><span>Bust / Chest</span><span>Waist</span><span>Hip</span>
+      <span>Armhole</span><span>Sleeve Length</span><span>Dress Length</span><span>Neck Depth</span>
+      <span>Rise</span><span>Thigh</span><span>Calf / Bottom</span><span>Desired Ease</span>
+    </div>
+    <p class="note">Tip: Take body measurements snugly without pulling the tape. Add garment ease and seam allowance according to the fabric, design and fit you want.</p>
+  </div>
+
+  <div class="cutSteps">
+    <div><b>01</b><span>Measure</span><small>Record body measurements</small></div>
+    <div><b>02</b><span>Draft</span><small>Mark the pattern clearly</small></div>
+    <div><b>03</b><span>Cut</span><small>Check grain & matching points</small></div>
+    <div><b>04</b><span>Stitch</span><small>Follow the assembly order</small></div>
+    <div><b>05</b><span>Finish</span><small>Press, hem & inspect</small></div>
+  </div>
+
+  <p class="tailorNote">📌 These are educational drafting/cutting guidelines. Exact formulas vary by garment style, fabric, fitting preference and tailor's method. Always make a test piece for a new design.</p>
+</section>
+
+<section id="about" class="panel" style="margin-bottom:45px"><h2>About HUMANVITALITY</h2><p style="color:var(--muted);line-height:1.8">HUMANVITALITY is an educational health and wellness publication. Articles are intended for general information and are not a substitute for diagnosis or treatment from a qualified healthcare professional.</p></section>
+</main>
+
+<footer><div class="foot"><div><b>HUMANVITALITY</b><br><small>Health · Wellness · Natural Living</small></div><small>© 2026 HUMANVITALITY · Educational content only</small></div></footer>
+
+<script>
+function searchSite(){
+ const q=document.getElementById('q').value.trim();
+ if(!q){document.getElementById('q').focus();return}
+ location.href='https://humanvitalities.blogspot.com/search?q='+encodeURIComponent(q);
+}
+function dailyTip(){
+ const tips=[
+ "Stay hydrated and choose water regularly through the day.",
+ "A balanced diet is built from variety, not one 'magic' food.",
+ "For persistent or worrying symptoms, seek advice from a qualified healthcare professional.",
+ "Good sleep, regular movement and nutritious food are foundations of everyday wellbeing."
+ ];
+ const d=new Date(); document.getElementById('tipText').textContent=tips[d.getDate()%tips.length];
+}
+document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});
+</script>
+</body></html>
