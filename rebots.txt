@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hennabynaaz007-star.github.io/smartdeals-humanvitality/sitemap.xml
