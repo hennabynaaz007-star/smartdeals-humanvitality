@@ -606,7 +606,93 @@ grid-template-columns:1fr 1fr
 }
 
 }
+.featured-section {
+  margin: 50px auto;
+  max-width: 1150px;
+  padding: 20px;
+}
 
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.section-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.featured-card {
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.10);
+}
+
+.featured-card .tag {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.featured-card h3 {
+  margin: 12px 0 10px;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.featured-card p {
+  line-height: 1.65;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.featured-card a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
+  }
+}
 </style>
 </head>
 
@@ -733,7 +819,59 @@ Search
 </div>
 
 </section>
+<section class="featured-section">
+  <div class="section-heading">
+    <span>✨ Featured Reading</span>
+    <h2>Explore Helpful Health Guides</h2>
+    <p>Handpicked articles from HUMANVITALITY to help you learn, care and live well.</p>
+  </div>
 
+  <div class="featured-grid">
+
+    <article class="featured-card">
+      <span class="tag">❤️ Heart & BP</span>
+      <h3>High Blood Pressure — Causes, Effects & Solutions</h3>
+      <p>Explore educational information about high blood pressure, its causes, effects and precautions.</p>
+      <a href="https://humanvitalities.blogspot.com/2023/06/high-blood-pressure-high-blood-pressure.html" target="_blank">Read Article →</a>
+    </article>
+
+    <article class="featured-card">
+      <span class="tag">❤️ Heart & BP</span>
+      <h3>Low Blood Pressure — Causes, Effects & Solutions</h3>
+      <p>Learn about low blood pressure, common causes, possible effects and practical health information.</p>
+      <a href="https://humanvitalities.blogspot.com/2023/06/low-blood-pressure-low-blood-pressure.html" target="_blank">Read Article →</a>
+    </article>
+
+    <article class="featured-card">
+      <span class="tag">💇 Hair Care</span>
+      <h3>Hair Fall Solutions — Homemade Hair Care</h3>
+      <p>Discover homemade and natural hair-care ideas for common hair-fall concerns.</p>
+      <a href="https://humanvitalities.blogspot.com/2023/06/hair-fall-solutions-homemade-solutions.html" target="_blank">Read Article →</a>
+    </article>
+
+    <article class="featured-card">
+      <span class="tag">💆 Skin Care</span>
+      <h3>Skin Types & Daily Skin Routine</h3>
+      <p>Explore useful information about different skin types and simple daily skin-care routines.</p>
+      <a href="https://humanvitalities.blogspot.com/2023/05/skin-types-daily-skin-routine.html" target="_blank">Read Article →</a>
+    </article>
+
+    <article class="featured-card">
+      <span class="tag">🦷 Dental Care</span>
+      <h3>Dental Health & Dental Care</h3>
+      <p>Learn basic dental-care information and healthy habits for better oral health.</p>
+      <a href="https://humanvitalities.blogspot.com/2023/05/dental-health-dental-care-and-its.html" target="_blank">Read Article →</a>
+    </article>
+
+    <article class="featured-card">
+      <span class="tag">👶 Baby & Kids</span>
+      <h3>How to Take Care of a New Born Child</h3>
+      <p>Helpful information about newborn care, everyday needs and healthy habits.</p>
+      <a href="https://humanvitalities.blogspot.com/2023/05/how-to-take-care-of-new-born-child-in.html" target="_blank">Read Article →</a>
+    </article>
+
+  </div>
+</section>
 
 <!-- POPULAR -->
 
