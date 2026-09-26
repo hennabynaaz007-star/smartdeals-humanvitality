@@ -15,6 +15,7 @@
 <link rel="canonical" href="https://hennabynaaz007-star.github.io/smartdeals-humanvitality/">
 
 <style>
+
 :root{
 --bg:#f6fbfa;
 --card:#fff;
@@ -25,7 +26,6 @@
 --c:#ff8b6b;
 --line:#e3eeeb;
 --shadow:0 16px 45px rgba(24,49,45,.10)
-  
 }
 
 *{box-sizing:border-box}
@@ -39,7 +39,10 @@ background:var(--bg);
 color:var(--ink)
 }
 
-a{text-decoration:none;color:inherit}
+a{
+text-decoration:none;
+color:inherit
+}
 
 .top{
 background:linear-gradient(90deg,#123d35,#5b5be7);
@@ -74,7 +77,9 @@ font-weight:900;
 letter-spacing:.8px
 }
 
-.brand span{color:var(--a)}
+.brand span{
+color:var(--a)
+}
 
 .links{
 margin-left:auto;
@@ -84,7 +89,9 @@ font-size:14px;
 font-weight:700
 }
 
-.links a:hover{color:var(--a)}
+.links a:hover{
+color:var(--a)
+}
 
 .menu{
 display:none;
@@ -218,7 +225,9 @@ transform:translateY(-5px);
 box-shadow:var(--shadow)
 }
 
-.ico{font-size:30px}
+.ico{
+font-size:30px
+}
 
 .cat b{
 display:block;
@@ -249,7 +258,9 @@ padding:17px 0;
 border-bottom:1px solid var(--line)
 }
 
-.post:last-child{border:0}
+.post:last-child{
+border:0
+}
 
 .post h3{
 margin:5px 0 7px;
@@ -309,7 +320,9 @@ border-radius:20px;
 padding:21px
 }
 
-.feature h3{margin:8px 0}
+.feature h3{
+margin:8px 0
+}
 
 .feature p{
 color:var(--muted);
@@ -317,9 +330,139 @@ font-size:14px;
 line-height:1.6
 }
 
-/* Tailoring */
 
-.tailoring{margin-top:45px}
+/* FEATURED ARTICLES */
+
+.featured-section{
+margin:50px auto;
+max-width:1150px;
+padding:20px
+}
+
+.section-heading{
+text-align:center;
+margin-bottom:30px
+}
+
+.section-heading span{
+display:inline-block;
+font-size:14px;
+font-weight:700;
+letter-spacing:1px;
+margin-bottom:8px
+}
+
+.section-heading h2{
+margin:0 0 10px;
+font-size:32px
+}
+
+.section-heading p{
+max-width:650px;
+margin:0 auto;
+line-height:1.7;
+opacity:.8
+}
+
+.featured-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.featured-card{
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(0,0,0,.08);
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+transition:transform .25s ease,box-shadow .25s ease;
+background:#fff
+}
+
+.featured-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 32px rgba(0,0,0,.10)
+}
+
+.featured-card .tag{
+font-size:13px;
+font-weight:700
+}
+
+.featured-card h3{
+margin:12px 0 10px;
+font-size:20px;
+line-height:1.35
+}
+
+.featured-card p{
+line-height:1.65;
+font-size:14px;
+margin-bottom:18px
+}
+
+.featured-card a{
+font-weight:700;
+text-decoration:none
+}
+
+
+/* LATEST HEALTH ARTICLES */
+
+.latest-section{
+max-width:1150px;
+margin:60px auto;
+padding:20px
+}
+
+.latest-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.latest-card{
+padding:24px;
+border-radius:20px;
+border:1px solid rgba(0,0,0,.08);
+background:rgba(255,255,255,.7);
+box-shadow:0 8px 24px rgba(0,0,0,.06);
+transition:transform .25s ease,box-shadow .25s ease
+}
+
+.latest-card:hover{
+transform:translateY(-5px);
+box-shadow:0 14px 30px rgba(0,0,0,.10)
+}
+
+.latest-card>span{
+font-size:13px;
+font-weight:700
+}
+
+.latest-card h3{
+margin:12px 0 10px;
+font-size:19px;
+line-height:1.4
+}
+
+.latest-card p{
+font-size:14px;
+line-height:1.65;
+margin-bottom:18px
+}
+
+.latest-card a{
+font-weight:700;
+text-decoration:none
+}
+
+
+/* TAILORING */
+
+.tailoring{
+margin-top:45px
+}
 
 .tailorHero{
 display:flex;
@@ -383,7 +526,9 @@ transform:translateY(-5px);
 box-shadow:var(--shadow)
 }
 
-.ticon{font-size:34px}
+.ticon{
+font-size:34px
+}
 
 .tcard h3{
 margin:8px 0 12px
@@ -396,7 +541,9 @@ line-height:1.65;
 margin:8px 0
 }
 
-.tcard b{color:var(--ink)}
+.tcard b{
+color:var(--ink)
+}
 
 .measurePanel{
 margin-top:20px;
@@ -406,7 +553,9 @@ border-radius:24px;
 padding:25px
 }
 
-.measurePanel h3{margin-top:0}
+.measurePanel h3{
+margin-top:0
+}
 
 .measureGrid{
 display:grid;
@@ -458,7 +607,9 @@ color:#fff
 display:block
 }
 
-.cutSteps span{font-weight:900}
+.cutSteps span{
+font-weight:900
+}
 
 .cutSteps small{
 color:var(--muted);
@@ -474,7 +625,8 @@ border-radius:16px;
 padding:14px
 }
 
-/* Footer */
+
+/* FOOTER */
 
 footer{
 background:#122e29;
@@ -491,9 +643,24 @@ justify-content:space-between;
 gap:25px
 }
 
-.foot small{color:#9eb4ae}
+.foot small{
+color:#9eb4ae
+}
 
-/* Mobile */
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.featured-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.latest-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+}
 
 @media(max-width:800px){
 
@@ -511,7 +678,9 @@ border-bottom:1px solid var(--line);
 box-shadow:0 10px 25px rgba(0,0,0,.08)
 }
 
-.links.show{display:flex}
+.links.show{
+display:flex
+}
 
 .menu{
 display:block;
@@ -530,9 +699,13 @@ grid-template-columns:1fr
 padding:34px 25px
 }
 
-h1{letter-spacing:-1px}
+h1{
+letter-spacing:-1px
+}
 
-.foot{display:block}
+.foot{
+display:block
+}
 
 .tailorGrid{
 grid-template-columns:1fr 1fr
@@ -548,13 +721,31 @@ grid-template-columns:repeat(2,1fr)
 
 }
 
+@media(max-width:560px){
+
+.featured-grid{
+grid-template-columns:1fr
+}
+
+.latest-grid{
+grid-template-columns:1fr
+}
+
+.section-heading h2{
+font-size:26px
+}
+
+}
+
 @media(max-width:480px){
 
 .grid{
 grid-template-columns:1fr 1fr
 }
 
-.cat{padding:17px}
+.cat{
+padding:17px
+}
 
 .navin{
 padding:12px 16px
@@ -607,152 +798,7 @@ grid-template-columns:1fr 1fr
 }
 
 }
-.featured-section {
-  margin: 50px auto;
-  max-width: 1150px;
-  padding: 20px;
-}
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-heading span {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-.section-heading h2 {
-  margin: 0 0 10px;
-  font-size: 32px;
-}
-
-.section-heading p {
-  max-width: 650px;
-  margin: 0 auto;
-  line-height: 1.7;
-  opacity: 0.8;
-}
-
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.featured-card {
-  padding: 25px;
-  border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.featured-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.10);
-}
-
-.featured-card .tag {
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.featured-card h3 {
-  margin: 12px 0 10px;
-  font-size: 20px;
-  line-height: 1.35;
-}
-
-.featured-card p {
-  line-height: 1.65;
-  font-size: 14px;
-  margin-bottom: 18px;
-}
-
-.featured-card a {
-  font-weight: 700;
-  text-decoration: none;
-}
-
-@media (max-width: 850px) {
-  .featured-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-heading h2 {
-    font-size: 26px;
-  }
-}
-  .latest-section {
-  max-width: 1150px;
-  margin: 60px auto;
-  padding: 20px;
-}
-
-.latest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.latest-card {
-  padding: 24px;
-  border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(255,255,255,0.7);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.latest-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
-}
-
-.latest-card > span {
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.latest-card h3 {
-  margin: 12px 0 10px;
-  font-size: 19px;
-  line-height: 1.4;
-}
-
-.latest-card p {
-  font-size: 14px;
-  line-height: 1.65;
-  margin-bottom: 18px;
-}
-
-.latest-card a {
-  font-weight: 700;
-  text-decoration: none;
-}
-
-@media (max-width: 850px) {
-  .latest-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .latest-grid {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
 </head>
 
@@ -785,6 +831,7 @@ HUMAN<span>VITALITY</span>
 </div>
 </nav>
 
+
 <header class="hero">
 
 <div class="heroBox">
@@ -815,7 +862,9 @@ Search
 
 </header>
 
+
 <main class="wrap">
+
 
 <!-- TOPICS -->
 
@@ -829,237 +878,556 @@ Search
 <div class="grid">
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/06/low-blood-pressure-low-blood-pressure.html" target="_blank">
-  <div class="ico">❤️</div>
-  <b>Heart & BP</b>
-  <small>Blood pressure & cardiovascular wellness</small>
+<div class="ico">❤️</div>
+<b>Heart & BP</b>
+<small>Blood pressure & cardiovascular wellness</small>
 </a>
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/05/how-to-take-care-of-new-born-child-in.html" target="_blank">
-  <div class="ico">👶</div>
-  <b>Baby & Kids</b>
-  <small>Child care, health & nutrition</small>
+<div class="ico">👶</div>
+<b>Baby & Kids</b>
+<small>Child care, health & nutrition</small>
 </a>
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/05/healthy-life-style-tips-as-per-age.html" target="_blank">
-  <div class="ico">🌿</div>
-  <b>Natural Wellness</b>
-  <small>Healthy lifestyle & natural wellness</small>
+<div class="ico">🌿</div>
+<b>Natural Wellness</b>
+<small>Healthy lifestyle & natural wellness</small>
 </a>
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/05/skin-types-daily-skin-routine.html" target="_blank">
-  <div class="ico">💆</div>
-  <b>Skin & Hair</b>
-  <small>Skin care, hair care & routines</small>
+<div class="ico">💆</div>
+<b>Skin & Hair</b>
+<small>Skin care, hair care & routines</small>
 </a>
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/05/dental-health-dental-care-and-its.html" target="_blank">
-  <div class="ico">🦷</div>
-  <b>Dental Care</b>
-  <small>Oral health & dental care</small>
+<div class="ico">🦷</div>
+<b>Dental Care</b>
+<small>Oral health & dental care</small>
 </a>
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/05/myths-about-nutritions-and-its-facts.html" target="_blank">
-  <div class="ico">🥗</div>
-  <b>Nutrition</b>
-  <small>Nutrition, food & healthy habits</small>
+<div class="ico">🥗</div>
+<b>Nutrition</b>
+<small>Nutrition, food & healthy habits</small>
 </a>
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/05/live-well-with-diabetes-symptoms-causes.html" target="_blank">
-  <div class="ico">🧠</div>
-  <b>Wellness</b>
-  <small>Mind-body health & wellbeing</small>
+<div class="ico">🧠</div>
+<b>Wellness</b>
+<small>Mind-body health & wellbeing</small>
 </a>
 
 <a class="cat" href="https://humanvitalities.blogspot.com/2023/04/how%20to%20live%20a%20vitality%20life.html" target="_blank">
-  <div class="ico">📚</div>
-  <b>Health Guides</b>
-  <small>Simple health & lifestyle guides</small>
+<div class="ico">📚</div>
+<b>Health Guides</b>
+<small>Simple health & lifestyle guides</small>
 </a>
 
 </div>
 
 </section>
+
+
+<!-- FEATURED ARTICLES -->
+
 <section class="featured-section">
-  <div class="section-heading">
-    <span>✨ Featured Reading</span>
-    <h2>Explore Helpful Health Guides</h2>
-    <p>Handpicked articles from HUMANVITALITY to help you learn, care and live well.</p>
-  </div>
 
-  <div class="featured-grid">
+<div class="section-heading">
 
-    <article class="featured-card">
-      <span class="tag">❤️ Heart & BP</span>
-      <h3>High Blood Pressure — Causes, Effects & Solutions</h3>
-      <p>Explore educational information about high blood pressure, its causes, effects and precautions.</p>
-      <a href="https://humanvitalities.blogspot.com/2023/06/high-blood-pressure-high-blood-pressure.html" target="_blank">Read Article →</a>
-    </article>
+<span>✨ Featured Reading</span>
 
-    <article class="featured-card">
-      <span class="tag">❤️ Heart & BP</span>
-      <h3>Low Blood Pressure — Causes, Effects & Solutions</h3>
-      <p>Learn about low blood pressure, common causes, possible effects and practical health information.</p>
-      <a href="https://humanvitalities.blogspot.com/2023/06/low-blood-pressure-low-blood-pressure.html" target="_blank">Read Article →</a>
-    </article>
+<h2>
+Explore Helpful Health Guides
+</h2>
 
-    <article class="featured-card">
-      <span class="tag">💇 Hair Care</span>
-      <h3>Hair Fall Solutions — Homemade Hair Care</h3>
-      <p>Discover homemade and natural hair-care ideas for common hair-fall concerns.</p>
-      <a href="https://humanvitalities.blogspot.com/2023/06/hair-fall-solutions-homemade-solutions.html" target="_blank">Read Article →</a>
-    </article>
+<p>
+Handpicked articles from HUMANVITALITY to help you learn, care and live well.
+</p>
 
-    <article class="featured-card">
-      <span class="tag">💆 Skin Care</span>
-      <h3>Skin Types & Daily Skin Routine</h3>
-      <p>Explore useful information about different skin types and simple daily skin-care routines.</p>
-      <a href="https://humanvitalities.blogspot.com/2023/05/skin-types-daily-skin-routine.html" target="_blank">Read Article →</a>
-    </article>
+</div>
 
-    <article class="featured-card">
-      <span class="tag">🦷 Dental Care</span>
-      <h3>Dental Health & Dental Care</h3>
-      <p>Learn basic dental-care information and healthy habits for better oral health.</p>
-      <a href="https://humanvitalities.blogspot.com/2023/05/dental-health-dental-care-and-its.html" target="_blank">Read Article →</a>
-    </article>
 
-    <article class="featured-card">
-      <span class="tag">👶 Baby & Kids</span>
-      <h3>How to Take Care of a New Born Child</h3>
-      <p>Helpful information about newborn care, everyday needs and healthy habits.</p>
-      <a href="https://humanvitalities.blogspot.com/2023/05/how-to-take-care-of-new-born-child-in.html" target="_blank">Read Article →</a>
-    </article>
+<div class="featured-grid">
 
-  </div>
+
+<article class="featured-card">
+
+<span class="tag">
+❤️ Heart & BP
+</span>
+
+<h3>
+High Blood Pressure — Causes, Effects & Solutions
+</h3>
+
+<p>
+Explore educational information about high blood pressure, its causes, effects and precautions.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/high-blood-pressure-high-blood-pressure.html" target="_blank">
+Read Article →
+</a>
+
+</article>
+
+
+<article class="featured-card">
+
+<span class="tag">
+❤️ Heart & BP
+</span>
+
+<h3>
+Low Blood Pressure — Causes, Effects & Solutions
+</h3>
+
+<p>
+Learn about low blood pressure, common causes, possible effects and practical health information.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/low-blood-pressure-low-blood-pressure.html" target="_blank">
+Read Article →
+</a>
+
+</article>
+
+
+<article class="featured-card">
+
+<span class="tag">
+💇 Hair Care
+</span>
+
+<h3>
+Hair Fall Solutions — Homemade Hair Care
+</h3>
+
+<p>
+Discover homemade and natural hair-care ideas for common hair-fall concerns.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/hair-fall-solutions-homemade-solutions.html" target="_blank">
+Read Article →
+</a>
+
+</article>
+
+
+<article class="featured-card">
+
+<span class="tag">
+💆 Skin Care
+</span>
+
+<h3>
+Skin Types & Daily Skin Routine
+</h3>
+
+<p>
+Explore useful information about different skin types and simple daily skin-care routines.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/skin-types-daily-skin-routine.html" target="_blank">
+Read Article →
+</a>
+
+</article>
+
+
+<article class="featured-card">
+
+<span class="tag">
+🦷 Dental Care
+</span>
+
+<h3>
+Dental Health & Dental Care
+</h3>
+
+<p>
+Learn basic dental-care information and healthy habits for better oral health.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/dental-health-dental-care-and-its.html" target="_blank">
+Read Article →
+</a>
+
+</article>
+
+
+<article class="featured-card">
+
+<span class="tag">
+👶 Baby & Kids
+</span>
+
+<h3>
+How to Take Care of a New Born Child
+</h3>
+
+<p>
+Helpful information about newborn care, everyday needs and healthy habits.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/how-to-take-care-of-new-born-child-in.html" target="_blank">
+Read Article →
+</a>
+
+</article>
+
+
+</div>
+
 </section>
-.latest-section {
-  max-width: 1150px;
-  margin: 60px auto;
-  padding: 20px;
-}
 
-.latest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
 
-.latest-card {
-  padding: 24px;
-  border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(255,255,255,0.7);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+<!-- LATEST HEALTH LIBRARY -->
 
-.latest-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
-}
+<section class="latest-section">
 
-.latest-card > span {
-  font-size: 13px;
-  font-weight: 700;
-}
+<div class="section-heading">
 
-.latest-card h3 {
-  margin: 12px 0 10px;
-  font-size: 19px;
-  line-height: 1.4;
-}
+<span>
+📚 Latest Health Library
+</span>
 
-.latest-card p {
-  font-size: 14px;
-  line-height: 1.65;
-  margin-bottom: 18px;
-}
+<h2>
+More From HUMANVITALITY
+</h2>
 
-.latest-card a {
-  font-weight: 700;
-  text-decoration: none;
-}
+<p>
+Explore more practical health, wellness, nutrition and lifestyle guides.
+</p>
 
-@media (max-width: 850px) {
-  .latest-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+</div>
 
-@media (max-width: 560px) {
-  .latest-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
+<div class="latest-grid">
+
+
+<article class="latest-card">
+
+<span>
+🥗 Nutrition
+</span>
+
+<h3>
+Myths About Nutrition & Its Facts
+</h3>
+
+<p>
+Learn about common nutrition myths and the facts behind healthy eating.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/myths-about-nutritions-and-its-facts.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+👧 Kids Health
+</span>
+
+<h3>
+Children's Health Care & Healthy Snacks
+</h3>
+
+<p>
+Helpful information about children's health, food choices and healthy snacks.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/childrens-health-care-snacks-health.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+🌿 Lifestyle
+</span>
+
+<h3>
+Healthy Lifestyle Tips as per Age
+</h3>
+
+<p>
+Simple lifestyle guidance for maintaining healthy habits at different ages.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/healthy-life-style-tips-as-per-age.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+🩺 Diabetes
+</span>
+
+<h3>
+Live Well with Diabetes
+</h3>
+
+<p>
+Educational information about diabetes, symptoms, causes and healthy living.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/live-well-with-diabetes-symptoms-causes.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+☀️ Wellness
+</span>
+
+<h3>
+Healthy Morning Drinks
+</h3>
+
+<p>
+Explore simple ideas and information about healthy morning drinks.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/healthy-morning-drinks-healthy-drinks.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+✨ Skin Care
+</span>
+
+<h3>
+Home Remedies for All Skin Types
+</h3>
+
+<p>
+Discover general home-care ideas for different skin types.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/home-remedies-for-all-skin-types-home.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+🦷 Kids Dental
+</span>
+
+<h3>
+Dental Care for Kids
+</h3>
+
+<p>
+Helpful information about children's dental care and healthy oral habits.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/05/dental-care-kids-dental-care.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+💇 Hair Care
+</span>
+
+<h3>
+Hair Treatment for Different Hair Issues
+</h3>
+
+<p>
+Explore educational information about common hair concerns and care approaches.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/hair-treatment-different-hair-issues.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+<article class="latest-card">
+
+<span>
+🌱 Vitality
+</span>
+
+<h3>
+How to Live a Vitality Life
+</h3>
+
+<p>
+Explore simple ideas for a healthier, balanced and more energetic lifestyle.
+</p>
+
+<a href="https://humanvitalities.blogspot.com/2023/04/how%20to%20live%20a%20vitality%20life.html" target="_blank">
+Explore Guide →
+</a>
+
+</article>
+
+
+</div>
+
+</section>
+
+
 <!-- POPULAR -->
 
 <section id="popular">
 
 <div class="sectionHead">
-<h2>Popular & useful</h2>
-<span>Featured reading</span>
+
+<h2>
+Popular & useful
+</h2>
+
+<span>
+Featured reading
+</span>
+
 </div>
+
 
 <div class="content">
 
+
 <div class="panel" id="articleList">
 
-<article class="post">
-  <span class="tag">Heart & BP</span>
-  <h3>
-    <a href="https://humanvitalities.blogspot.com/2023/06/low-blood-pressure-low-blood-pressure.html" target="_blank">
-      Low Blood Pressure — Causes, Effects & Solutions
-    </a>
-  </h3>
-  <p>
-    Learn about low blood pressure, common causes, possible effects and practical health information.
-  </p>
-</article>
-
-
 
 <article class="post">
-  <span class="tag">Hair Care</span>
-  <h3>
-    <a href="https://humanvitalities.blogspot.com/2023/06/hair-fall-solutions-homemade-solutions.html" target="_blank">
-      Hair Fall Solutions — Homemade Hair Care
-    </a>
-  </h3>
-  <p>
-    Discover homemade and natural hair-care ideas for common hair-fall concerns.
-  </p>
+
+<span class="tag">
+Heart & BP
+</span>
+
+<h3>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/low-blood-pressure-low-blood-pressure.html" target="_blank">
+
+Low Blood Pressure — Causes, Effects & Solutions
+
+</a>
+
+</h3>
+
+<p>
+Learn about low blood pressure, common causes, possible effects and practical health information.
+</p>
+
 </article>
+
 
 <article class="post">
-  <span class="tag">Hair Care</span>
-  <h3>
-    <a href="https://humanvitalities.blogspot.com/2023/06/hair-treatment-different-hair-issues.html" target="_blank">
-      Hair Treatment — Different Hair Issues & Solutions
-    </a>
-  </h3>
-  <p>
-    Browse educational information about different hair conditions and possible care approaches.
-  </p>
+
+<span class="tag">
+Hair Care
+</span>
+
+<h3>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/hair-fall-solutions-homemade-solutions.html" target="_blank">
+
+Hair Fall Solutions — Homemade Hair Care
+
+</a>
+
+</h3>
+
+<p>
+Discover homemade and natural hair-care ideas for common hair-fall concerns.
+</p>
+
 </article>
 
-  <article class="post">
-  <span class="tag">Heart & BP</span>
-  <h3>
-    <a href="https://humanvitalities.blogspot.com/2023/06/high-blood-pressure-high-blood-pressure.html" target="_blank">
-      High Blood Pressure — Causes, Effects & Solutions
-    </a>
-  </h3>
-  <p>
-    Explore educational information about high blood pressure, its causes, effects and precautions.
-  </p>
+
+<article class="post">
+
+<span class="tag">
+Hair Care
+</span>
+
+<h3>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/hair-treatment-different-hair-issues.html" target="_blank">
+
+Hair Treatment — Different Hair Issues & Solutions
+
+</a>
+
+</h3>
+
+<p>
+Browse educational information about different hair conditions and possible care approaches.
+</p>
+
 </article>
+
+
+<article class="post">
+
+<span class="tag">
+Heart & BP
+</span>
+
+<h3>
+
+<a href="https://humanvitalities.blogspot.com/2023/06/high-blood-pressure-high-blood-pressure.html" target="_blank">
+
+High Blood Pressure — Causes, Effects & Solutions
+
+</a>
+
+</h3>
+
+<p>
+Explore educational information about high blood pressure, its causes, effects and precautions.
+</p>
+
+</article>
+
+
 </div>
+
 
 <aside class="tip">
 
-<div style="font-size:30px">💡</div>
+<div style="font-size:30px">
+💡
+</div>
 
-<h2>Health Tip of the Day</h2>
+<h2>
+Health Tip of the Day
+</h2>
 
 <p>
 Use this space for a rotating daily tip, seasonal reminder or featured article from your HUMANVITALITY blog.
@@ -1073,6 +1441,7 @@ Show today's tip
 
 </aside>
 
+
 </div>
 
 </section>
@@ -1083,9 +1452,17 @@ Show today's tip
 <section id="tailoring" class="tailoring">
 
 <div class="sectionHead">
-<h2>✂️ Tailoring & Designer Dress Studio</h2>
-<span>Measurements · Cutting · Stitching</span>
+
+<h2>
+✂️ Tailoring & Designer Dress Studio
+</h2>
+
+<span>
+Measurements · Cutting · Stitching
+</span>
+
 </div>
+
 
 <div class="tailorHero">
 
@@ -1105,13 +1482,18 @@ Practical garment measurements, cutting notes and stitching checkpoints in one c
 
 </div>
 
+
 <div class="tape">
+
 📏
+
 <br>
+
 <small>
 MEASURE<br>
 WITH CARE
 </small>
+
 </div>
 
 </div>
@@ -1119,11 +1501,16 @@ WITH CARE
 
 <div class="tailorGrid">
 
+
 <article class="tcard">
 
-<div class="ticon">👗</div>
+<div class="ticon">
+👗
+</div>
 
-<h3>Kurti / Kameez</h3>
+<h3>
+Kurti / Kameez
+</h3>
 
 <p>
 <b>Measure:</b> full length, shoulder, bust, waist, hip, armhole, sleeve length and neck depth.
@@ -1142,9 +1529,13 @@ WITH CARE
 
 <article class="tcard">
 
-<div class="ticon">🌸</div>
+<div class="ticon">
+🌸
+</div>
 
-<h3>Anarkali / Gown</h3>
+<h3>
+Anarkali / Gown
+</h3>
 
 <p>
 <b>Measure:</b> bodice length, bust, waist, shoulder, armhole, sleeve and desired flare/length.
@@ -1163,9 +1554,13 @@ WITH CARE
 
 <article class="tcard">
 
-<div class="ticon">👚</div>
+<div class="ticon">
+👚
+</div>
 
-<h3>Blouse</h3>
+<h3>
+Blouse
+</h3>
 
 <p>
 <b>Measure:</b> bust, under-bust, shoulder, armhole, blouse length, front/back neck and sleeve.
@@ -1184,9 +1579,13 @@ WITH CARE
 
 <article class="tcard">
 
-<div class="ticon">🩳</div>
+<div class="ticon">
+🩳
+</div>
 
-<h3>Salwar / Churidar</h3>
+<h3>
+Salwar / Churidar
+</h3>
 
 <p>
 <b>Measure:</b> waist, hip, rise, full length, thigh, calf/ankle and desired bottom opening.
@@ -1205,9 +1604,13 @@ WITH CARE
 
 <article class="tcard">
 
-<div class="ticon">💃</div>
+<div class="ticon">
+💃
+</div>
 
-<h3>Sharara / Gharara</h3>
+<h3>
+Sharara / Gharara
+</h3>
 
 <p>
 <b>Measure:</b> waist, hip, rise, length and flare; decide panel width according to the design.
@@ -1226,9 +1629,13 @@ WITH CARE
 
 <article class="tcard">
 
-<div class="ticon">🧒</div>
+<div class="ticon">
+🧒
+</div>
 
-<h3>Kids Wear</h3>
+<h3>
+Kids Wear
+</h3>
 
 <p>
 <b>Measure:</b> chest, shoulder, armhole, waist, length and sleeve; allow comfortable movement.
@@ -1244,12 +1651,15 @@ WITH CARE
 
 </article>
 
+
 </div>
 
 
 <div class="measurePanel">
 
-<h3>📐 Measurement Checklist</h3>
+<h3>
+📐 Measurement Checklist
+</h3>
 
 <div class="measureGrid">
 
@@ -1322,35 +1732,65 @@ Tip: Take body measurements snugly without pulling the tape. Add garment ease an
 <section id="tools">
 
 <div class="sectionHead">
-<h2>Coming soon: Health Tools</h2>
-<span>Interactive features</span>
+
+<h2>
+Coming soon: Health Tools
+</h2>
+
+<span>
+Interactive features
+</span>
+
 </div>
+
 
 <div class="features">
 
+
 <div class="feature">
+
 🔎
-<h3>Health Topic Finder</h3>
+
+<h3>
+Health Topic Finder
+</h3>
+
 <p>
 Let visitors choose symptoms/topics and quickly discover relevant educational articles.
 </p>
+
 </div>
 
+
 <div class="feature">
+
 📩
-<h3>Weekly Vitality</h3>
+
+<h3>
+Weekly Vitality
+</h3>
+
 <p>
 Email signup area for new articles, healthy-living tips and featured guides.
 </p>
+
 </div>
 
+
 <div class="feature">
+
 🛍️
-<h3>Recommended Products</h3>
+
+<h3>
+Recommended Products
+</h3>
+
 <p>
 A dedicated, clearly disclosed affiliate section for useful wellness products.
 </p>
+
 </div>
+
 
 </div>
 
@@ -1361,7 +1801,9 @@ A dedicated, clearly disclosed affiliate section for useful wellness products.
 
 <section id="contact" class="panel" style="margin-bottom:30px">
 
-<h2>📩 Contact HUMANVITALITY</h2>
+<h2>
+📩 Contact HUMANVITALITY
+</h2>
 
 <p style="color:var(--muted);line-height:1.7">
 Have a question, suggestion or collaboration idea? We'd love to hear from you.
@@ -1383,13 +1825,16 @@ Email:
 
 <section id="about" class="panel" style="margin-bottom:45px">
 
-<h2>About HUMANVITALITY</h2>
+<h2>
+About HUMANVITALITY
+</h2>
 
 <p style="color:var(--muted);line-height:1.8">
 HUMANVITALITY is an educational health and wellness publication. Articles are intended for general information and are not a substitute for diagnosis or treatment from a qualified healthcare professional.
 </p>
 
 </section>
+
 
 </main>
 
@@ -1399,9 +1844,17 @@ HUMANVITALITY is an educational health and wellness publication. Articles are in
 <div class="foot">
 
 <div>
-<b>HUMANVITALITY</b>
+
+<b>
+HUMANVITALITY
+</b>
+
 <br>
-<small>Health · Wellness · Natural Living</small>
+
+<small>
+Health · Wellness · Natural Living
+</small>
+
 </div>
 
 <small>
@@ -1457,6 +1910,7 @@ if(e.key==='Enter')searchSite();
 });
 
 </script>
+
 
 </body>
 </html>
