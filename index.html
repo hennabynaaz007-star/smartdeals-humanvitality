@@ -472,7 +472,63 @@ border:1px solid #f3dfae;
 border-radius:16px;
 padding:14px
 }
+/* Tailoring Photo Gallery */
 
+.tailorPhotoGrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+margin:18px 0 25px
+}
+
+.tailorPhotoCard{
+background:#fff;
+border:1px solid var(--line);
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(24,49,45,.05);
+transition:.25s
+}
+
+.tailorPhotoCard:hover{
+transform:translateY(-5px);
+box-shadow:var(--shadow)
+}
+
+.tailorPhotoCard img{
+width:100%;
+aspect-ratio:4/5;
+display:block;
+object-fit:cover
+}
+
+.tailorPhotoCard div{
+padding:16px
+}
+
+.tailorPhotoCard h3{
+margin:0 0 7px;
+font-size:17px
+}
+
+.tailorPhotoCard p{
+margin:0;
+color:var(--muted);
+font-size:13px;
+line-height:1.5
+}
+
+@media(max-width:800px){
+.tailorPhotoGrid{
+grid-template-columns:repeat(2,1fr)
+}
+}
+
+@media(max-width:480px){
+.tailorPhotoGrid{
+grid-template-columns:1fr 1fr
+}
+}
 /* Footer */
 
 footer{
@@ -1138,7 +1194,52 @@ WITH CARE
 </p>
 
 </article>
+<!-- TAILORING PHOTO GALLERY -->
 
+<div class="sectionHead" style="margin-top:30px">
+<h2>📸 Designer Dress Gallery</h2>
+<span>Cutting · Stitching · Design Ideas</span>
+</div>
+
+<div class="tailorPhotoGrid">
+
+<article class="tailorPhotoCard">
+<img src="https://via.placeholder.com/800x1000?text=Kurti+%2F+Kameez"
+     alt="Kurti and Kameez tailoring design">
+<div>
+<h3>👗 Kurti / Kameez</h3>
+<p>Measurements, neckline, sleeves and cutting ideas.</p>
+</div>
+</article>
+
+<article class="tailorPhotoCard">
+<img src="https://via.placeholder.com/800x1000?text=Anarkali+%2F+Gown"
+     alt="Anarkali and gown tailoring design">
+<div>
+<h3>🌸 Anarkali / Gown</h3>
+<p>Flare, panel cutting and stitching inspiration.</p>
+</div>
+</article>
+
+<article class="tailorPhotoCard">
+<img src="https://via.placeholder.com/800x1000?text=Designer+Blouse"
+     alt="Designer blouse tailoring design">
+<div>
+<h3>👚 Designer Blouse</h3>
+<p>Blouse measurements, necklines and fitting details.</p>
+</div>
+</article>
+
+<article class="tailorPhotoCard">
+<img src="https://via.placeholder.com/800x1000?text=Sharara+%2F+Gharara"
+     alt="Sharara and Gharara tailoring design">
+<div>
+<h3>💃 Sharara / Gharara</h3>
+<p>Panel cutting, flare and finishing ideas.</p>
+</div>
+</article>
+
+</div>
 </div>
 
 
