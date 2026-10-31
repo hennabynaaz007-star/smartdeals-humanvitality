@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthy Indian Recipe Finder | HUMANVITALITIES</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f6f8f3;color:#29372e;font-family:Arial,sans-serif;line-height:1.6}
+#recipe-app{max-width:1050px;margin:auto;padding:18px}
+.hero{background:#e5f1e4;padding:30px 20px;text-align:center;border-radius:18px;margin-bottom:22px}
+.hero h1{margin:0 0 8px;color:#245b37;font-size:29px}
+.hero p{margin:0;color:#506454}
+.filters{background:#fff;padding:18px;border-radius:15px;box-shadow:0 2px 10px #0000000b;margin-bottom:22px}
+.filters h2{font-size:19px;margin:0 0 14px}
+.filter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.field label{display:block;font-size:13px;font-weight:bold;margin-bottom:5px}
+.field select,.field input{width:100%;padding:11px;border:1px solid #ccd8ca;border-radius:9px;background:#fff;font-size:14px;color:#29372e}
+.actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.btn{border:0;border-radius:9px;padding:11px 17px;background:#287344;color:white;font-weight:bold;cursor:pointer}
+.btn:hover{background:#1d5934}
+.btn.reset{background:#e9eee8;color:#334b39}
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:20px 0 12px}
+.results-head h2{font-size:21px;margin:0}
+#count{font-size:13px;color:#647468}
+.recipe-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.recipe-card{background:#fff;border:1px solid #e3e9e0;border-radius:15px;padding:17px;box-shadow:0 2px 8px #00000008}
+.recipe-card h3{margin:0 0 8px;color:#245b37;font-size:19px}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+.tag{background:#edf5ec;color:#315c3b;padding:4px 9px;border-radius:20px;font-size:12px}
+.description{font-size:14px;color:#566358;margin:8px 0}
+.details{border-top:1px solid #edf0eb;margin-top:13px;padding-top:12px}
+.details summary{cursor:pointer;color:#287344;font-weight:bold}
+.details h4{margin:13px 0 5px;font-size:14px}
+.details ul,.details ol{padding-left:21px;margin:5px 0;font-size:14px}
+.no-results{background:#fff;padding:25px;border-radius:12px;text-align:center;color:#68746a;grid-column:1/-1}
+.note{font-size:12px;color:#68746a;text-align:center;margin:24px 0 8px}
+@media(max-width:650px){
+#recipe-app{padding:12px}
+.hero{padding:24px 14px}
+.hero h1{font-size:23px}
+.filter-grid{grid-template-columns:1fr 1fr}
+.recipe-grid{grid-template-columns:1fr}
+}
+@media(max-width:380px){.filter-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="recipe-app">
+<section class="hero">
+<h1>Healthy Indian Recipe Finder</h1>
+<p>स्वादिष्ट और पौष्टिक भारतीय खाना — Find simple, healthy and budget-friendly recipes for every day.</p>
+</section>
+
+<section class="filters">
+<h2>Find Your Recipe | अपनी रेसिपी खोजें</h2>
+<div class="filter-grid">
+<div class="field">
+<label for="category">Category</label>
+<select id="category">
+<option value="all">All Categories</option>
+<option value="Healthy">Healthy</option>
+<option value="Weight Management">Weight Management</option>
+<option value="Family & Kids">Family & Kids</option>
+</select>
+</div>
+<div class="field">
+<label for="meal">Meal Type</label>
+<select id="meal">
+<option value="all">All Meals</option>
+<option value="Breakfast">Breakfast</option>
+<option value="Lunch">Lunch</option>
+<option value="Dinner">Dinner</option>
+<option value="Snacks">Snacks</option>
+</select>
+</div>
+<div class="field">
+<label for="type">Food Preference</label>
+<select id="type">
+<option value="all">Veg & Non-Veg</option>
+<option value="Veg">Vegetarian</option>
+<option value="Non-Veg">Non-Vegetarian</option>
+</select>
+</div>
+<div class="field">
+<label for="budget">Budget Per Serving</label>
+<select id="budget">
+<option value="all">Any Budget</option>
+<option value="50">Under ₹50</option>
+<option value="100">Under ₹100</option>
+</select>
+</div>
+<div class="field">
+<label for="time">Cooking Time</label>
+<select id="time">
+<option value="all">Any Time</option>
+<option value="15">Under 15 Minutes</option>
+<option value="30">Under 30 Minutes</option>
+</select>
+</div>
+<div class="field">
+<label for="search">Search Recipe</label>
+<input id="search" type="search" placeholder="Search name or ingredient...">
+</div>
+</div>
+<div class="actions">
+<button class="btn" id="apply">Find Recipes</button>
+<button class="btn reset" id="reset">Reset Filters</button>
+</div>
+</section>
+
+<div class="results-head">
+<h2>Healthy Recipes</h2>
+<span id="count" aria-live="polite"></span>
+</div>
+<div class="recipe-grid" id="results"></div>
+<p class="note">Estimated costs are approximate per serving and may vary by location, season and ingredient prices. Recipes are for general educational purposes.</p>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+const recipes=[
+{
+name:"Vegetable Poha | वेज पोहा",category:"Family & Kids",meal:"Breakfast",type:"Veg",cost:25,time:15,
+description:"A light and filling breakfast with vegetables and flattened rice.",
+ingredients:["1 cup poha","1 small onion, chopped","½ cup peas","½ tsp mustard seeds","Curry leaves","½ tsp turmeric","1 tsp oil","Lemon and coriander"],
+steps:["Rinse poha gently and drain the water.","Heat oil, add mustard seeds and curry leaves.","Add onion and peas; cook until soft.","Add turmeric and poha. Mix gently.","Cook for 2–3 minutes and finish with lemon and coriander."]
+},
+{
+name:"Moong Dal Chilla | मूंग दाल चीला",category:"Weight Management",meal:"Breakfast",type:"Veg",cost:35,time:20,
+description:"Protein-rich savoury pancakes made with soaked moong dal.",
+ingredients:["½ cup yellow or green moong dal","1 small green chilli","A little ginger","Chopped coriander","Salt to taste","½ tsp oil"],
+steps:["Soak moong dal for 2–3 hours.","Drain and blend with ginger, chilli and a little water.","Mix in salt and coriander.","Spread a thin layer on a warm non-stick pan.","Cook both sides using a little oil."]
+},
+{
+name:"Banana Oats Bowl | केला ओट्स बाउल",category:"Healthy",meal:"Breakfast",type:"Veg",cost:40,time:10,
+description:"A quick breakfast with oats, banana and milk.",
+ingredients:["½ cup oats","1 cup milk","1 ripe banana","A pinch of cinnamon","1 tsp chopped nuts (optional)"],
+steps:["Heat milk in a pan.","Add oats and cook for 4–5 minutes.","Slice the banana.","Pour oats into a bowl and add banana.","Sprinkle cinnamon and nuts."]
+},
+{
+name:"Egg Bhurji | अंडा भुर्जी",category:"Healthy",meal:"Breakfast",type:"Non-Veg",cost:35,time:12,
+description:"A simple egg dish with onion, tomato and spices.",
+ingredients:["2 eggs","1 small onion","1 small tomato","¼ tsp turmeric","¼ tsp cumin","Chilli and coriander","1 tsp oil"],
+steps:["Heat oil and add cumin.","Add chopped onion and cook until soft.","Add tomato, turmeric and chilli.","Beat eggs and pour into the pan.","Stir until eggs are fully cooked. Garnish with coriander."]
+},
+{
+name:"Sprouts Chaat | स्प्राउट्स चाट",category:"Weight Management",meal:"Snacks",type:"Veg",cost:30,time:10,
+description:"A refreshing snack with sprouts, cucumber and lemon.",
+ingredients:["1 cup boiled moong sprouts","½ cucumber","1 small tomato","Lemon juice","Roasted cumin powder","Salt and coriander"],
+steps:["Boil sprouts until tender.","Chop cucumber and tomato.","Mix vegetables with sprouts.","Add lemon, cumin powder and salt.","Garnish with coriander and serve."]
+},
+{
+name:"Vegetable Khichdi | वेज खिचड़ी",category:"Family & Kids",meal:"Dinner",type:"Veg",cost:40,time:25,
+description:"A comforting one-pot meal with rice, dal and vegetables.",
+ingredients:["¼ cup rice","¼ cup moong dal","½ cup mixed vegetables","¼ tsp turmeric","½ tsp cumin","Salt","½ tsp ghee"],
+steps:["Wash rice and dal together.","Heat ghee in a pressure cooker and add cumin.","Add vegetables, rice, dal, turmeric and salt.","Add 2½–3 cups water.","Pressure cook until soft. Serve warm."]
+},
+{
+name:"Besan Chilla | बेसन चीला",category:"Healthy",meal:"Breakfast",type:"Veg",cost:25,time:15,
+description:"Quick gram-flour pancakes with fresh vegetables.",
+ingredients:["½ cup besan","2 tbsp chopped onion","2 tbsp chopped tomato","Coriander","Turmeric and chilli powder","Water","½ tsp oil"],
+steps:["Add besan and spices to a bowl.","Add chopped vegetables and coriander.","Add water gradually to make a smooth batter.","Spread batter on a warm pan.","Cook both sides until golden."]
+},
+{
+name:"Chicken Vegetable Pulao | चिकन पुलाव",category:"Family & Kids",meal:"Lunch",type:"Non-Veg",cost:85,time:30,
+description:"A simple chicken and vegetable rice meal.",
+ingredients:["½ cup rice","100 g boneless chicken","¼ cup mixed vegetables","½ onion","Ginger-garlic paste","Whole spices","Salt and 1 tsp oil"],
+steps:["Wash rice and keep aside.","Heat oil and add whole spices and onion.","Add ginger-garlic paste and chicken; cook thoroughly.","Add vegetables, rice, salt and water.","Cook covered until rice is done and chicken is fully cooked."]
+},
+{
+name:"Curd Rice | दही चावल",category:"Family & Kids",meal:"Lunch",type:"Veg",cost:30,time:10,
+description:"A cooling and easy-to-prepare rice dish.",
+ingredients:["1 cup cooked rice","½ cup plain curd","2 tbsp milk","Mustard seeds","Curry leaves","A little grated carrot","½ tsp oil"],
+steps:["Mash cooled cooked rice lightly.","Mix curd and milk into the rice.","Heat oil and add mustard seeds and curry leaves.","Add the tempering to the rice.","Mix in grated carrot and serve."]
+},
+{
+name:"Paneer Bhurji | पनीर भुर्जी",category:"Healthy",meal:"Dinner",type:"Veg",cost:75,time:15,
+description:"A protein-rich paneer dish with onion and tomato.",
+ingredients:["100 g paneer","1 small onion","1 small tomato","¼ tsp turmeric","Cumin powder","Coriander","1 tsp oil"],
+steps:["Crumble paneer.","Heat oil and add cumin.","Add onion and cook until soft.","Add tomato and spices; cook briefly.","Add paneer and mix for 2–3 minutes. Garnish with coriander."]
+},
+{
+name:"Moong Dal Soup | मूंग दाल सूप",category:"Weight Management",meal:"Dinner",type:"Veg",cost:30,time:25,
+description:"A warm and simple lentil soup.",
+ingredients:["¼ cup yellow moong dal","½ tomato","A little ginger","¼ tsp turmeric","Cumin","Salt","Coriander"],
+steps:["Wash the dal well.","Add dal, tomato, ginger, turmeric and water to a cooker.","Cook until the dal is soft.","Mash or blend to your preferred consistency.","Add cumin tempering and coriander."]
+},
+{
+name:"Egg Vegetable Sandwich | एग वेज सैंडविच",category:"Family & Kids",meal:"Snacks",type:"Non-Veg",cost:45,time:12,
+description:"A quick sandwich with egg and fresh vegetables.",
+ingredients:["2 bread slices","1 boiled egg","2 tbsp chopped cucumber","2 tbsp chopped tomato","A little black pepper","A little curd or spread"],
+steps:["Boil the egg until fully cooked and peel it.","Mash the egg with chopped vegetables.","Add pepper and a little curd or spread.","Place the filling between bread slices.","Toast lightly on a pan and serve."]
+}
+];
+
+const $=id=>document.getElementById(id);
+const results=$("results");
+
+function render(){
+const category=$("category").value;
+const meal=$("meal").value;
+const type=$("type").value;
+const budget=$("budget").value;
+const time=$("time").value;
+const search=$("search").value.trim().toLowerCase();
+
+const filtered=recipes.filter(r=>
+(category==="all"||r.category===category)&&
+(meal==="all"||r.meal===meal)&&
+(type==="all"||r.type===type)&&
+(budget==="all"||r.cost<=Number(budget))&&
+(time==="all"||r.time<=Number(time))&&
+(r.name.toLowerCase().includes(search)||
+r.ingredients.join(" ").toLowerCase().includes(search)||
+r.description.toLowerCase().includes(search))
+);
+
+$("count").textContent=filtered.length+" recipe(s) found";
+
+if(!filtered.length){
+results.innerHTML='<div class="no-results">No recipes found. Try changing your filters.</div>';
+return;
+}
+
+results.innerHTML=filtered.map((r,i)=>`
+<article class="recipe-card">
+<h3>${r.name}</h3>
+<p class="description">${r.description}</p>
+<div class="meta">
+<span class="tag">${r.category}</span>
+<span class="tag">${r.meal}</span>
+<span class="tag">${r.type}</span>
+<span class="tag">₹${r.cost} approx.</span>
+<span class="tag">${r.time} min</span>
+</div>
+<details class="details">
+<summary>View Ingredients & Recipe</summary>
+<h4>Ingredients | सामग्री</h4>
+<ul>${r.ingredients.map(x=>`<li>${x}</li>`).join("")}</ul>
+<h4>Preparation Steps | बनाने का तरीका</h4>
+<ol>${r.steps.map(x=>`<li>${x}</li>`).join("")}</ol>
+</details>
+</article>`).join("");
+}
+
+$("apply").addEventListener("click",render);
+$("reset").addEventListener("click",()=>{
+["category","meal","type","budget","time"].forEach(id=>$(id).value="all");
+$("search").value="";
+render();
+});
+["category","meal","type","budget","time"].forEach(id=>{
+$(id).addEventListener("change",render);
+});
+$("search").addEventListener("input",render);
+
+render();
+})();
+</script>
+</body>
+</html>
