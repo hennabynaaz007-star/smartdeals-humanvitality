@@ -587,25 +587,6 @@ gap:25px
 @media(max-width:800px){.editorialGrid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.editorialGrid{grid-template-columns:1fr}}
 
-
-/* Automatic Blogger article feed */
-.hv-feed-status{grid-column:1/-1;text-align:center;color:var(--muted);padding:22px}
-.hv-feed-note{margin:16px 0 0;text-align:center;color:var(--muted);font-size:12px;line-height:1.6}
-.hv-article-thumb{width:100%;height:155px;object-fit:cover;border-radius:10px;margin:0 0 13px;display:block;background:#eef5f2}
-.hv-article-meta{font-size:11px;color:var(--muted);margin:0 0 8px}
-.hv-article-labels{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.hv-article-label{display:inline-block;background:#eef8f5;color:#087e67;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:800}
-.hv-category-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 22px}
-.hv-category-filter{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;cursor:pointer}
-.hv-category-filter:hover,.hv-category-filter.active{background:var(--a);border-color:var(--a);color:#fff}
-.hv-article-count{text-align:center;color:var(--muted);font-size:12px;margin:0 0 15px}
-.hv-all-articles-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.hv-all-articles-grid .hv-feature-card{min-width:0}
-.hv-all-articles-grid .hv-feature-card h3{line-height:1.35}
-.hv-all-articles-grid .hv-feature-card p{margin:0}
-@media(max-width:800px){.hv-all-articles-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:520px){.hv-all-articles-grid{grid-template-columns:1fr}.hv-article-thumb{height:190px}}
-
 /* Mobile */
 
 @media(max-width:800px){
@@ -755,7 +736,6 @@ HUMAN<span>VITALITY</span>
 <a href="#topics">Topics</a>
 <a href="#popular">Popular</a>
 <a href="#latest-articles">Latest</a>
-<a href="#all-articles">All Articles</a>
 <a href="#tailoring">Tailoring</a>
 <a href="#tools">Health Tools</a>
 <a href="#recommended">Products</a>
@@ -961,33 +941,50 @@ Search
   </div>
 </section>
 
-<!-- ================= AUTOMATIC LATEST HEALTH ARTICLES ================= -->
+<!-- ================= LATEST HEALTH ARTICLES ================= -->
 
 <section class="hv-feature-section" id="latest-articles">
   <h2>Latest Health Articles</h2>
-  <p class="hv-feature-intro">Fresh articles automatically fetched from the HUMANVITALITY Blogger publication.</p>
-  <div class="hv-feature-grid" id="latestArticlesGrid" aria-live="polite">
-    <p class="hv-feed-status">Loading latest articles…</p>
+  <p class="hv-feature-intro">
+    Read our latest articles on nutrition, family health and daily wellness.
+  </p>
+
+  <div class="hv-feature-grid">
+
+    <article class="hv-feature-card">
+      <h3>Gut Health, Skin, Immunity and Mood</h3>
+      <p>Understand how gut health is connected with skin, immunity and overall well-being.</p>
+      <a href="https://humanvitalities.blogspot.com/2026/10/gut-health-skin-immunity-mood.html">Read Article →</a>
+    </article>
+
+    <article class="hv-feature-card">
+      <h3>Healthy Dinner Recipes</h3>
+      <p>Explore simple and nutritious dinner ideas for your everyday meals.</p>
+      <a href="https://humanvitalities.blogspot.com/2026/10/healthy-dinner-recipes.html">Read Article →</a>
+    </article>
+
+    <article class="hv-feature-card">
+      <h3>Healthy Snacks for Two</h3>
+      <p>Find easy snack ideas for two people with a focus on balanced eating.</p>
+      <a href="https://humanvitalities.blogspot.com/2026/10/healthy-snacks-for-two.html">Read Article →</a>
+    </article>
+
+    <article class="hv-feature-card">
+      <h3>Daily Dental Care</h3>
+      <p>Learn simple daily habits for maintaining healthy teeth and gums.</p>
+      <a href="https://humanvitalities.blogspot.com/2026/09/daily-dental-care-healthy-teeth-gums.html">Read Article →</a>
+    </article>
+
+    <article class="hv-feature-card">
+      <h3>Simple Daily Skincare Routine</h3>
+      <p>Explore a simple skincare routine and learn about different skin types.</p>
+      <a href="https://humanvitalities.blogspot.com/2026/09/simple-daily-skincare-routine-skin-types.html">Read Article →</a>
+    </article>
+
   </div>
-  <p class="hv-feed-note">Newly published Blogger posts will appear here automatically when the feed refreshes.</p>
 </section>
 
-<!-- ================= AUTOMATIC ALL ARTICLES ================= -->
-
-<section class="hv-feature-section hv-all-articles" id="all-articles">
-  <h2>All Articles by Category</h2>
-  <p class="hv-feature-intro">Browse the complete HUMANVITALITY article library. Choose a category to narrow the list.</p>
-  <div class="hv-category-filters" id="articleCategoryFilters" aria-label="Filter articles by category">
-    <button type="button" class="hv-category-filter active" data-category="all">All Articles</button>
-  </div>
-  <div class="hv-article-count" id="allArticlesCount" aria-live="polite"></div>
-  <div class="hv-all-articles-grid" id="allArticlesGrid" aria-live="polite">
-    <p class="hv-feed-status">Loading all articles…</p>
-  </div>
-  <p class="hv-feed-note">This list is generated from published Blogger posts and their Labels. Draft posts are not displayed.</p>
-</section>
-
-<!-- ================= END AUTOMATIC BLOGGER ARTICLES ================= -->
+<!-- ================= END LATEST HEALTH ARTICLES ================= -->
 
 <!-- EDITORIAL STANDARDS -->
 
@@ -1049,7 +1046,7 @@ Alongside health topics, HUMANVITALITY explores everyday wellness, nutrition, pe
 </details>
 <details>
 <summary>Where can I read the full articles?</summary>
-<p>The featured titles on this homepage link to the original HUMANVITALITY Blogger articles. Use the “All Articles” section to browse published posts by Blogger Labels.</p>
+<p>The featured titles on this homepage link to the original HUMANVITALITY Blogger articles. Use the “Browse all HUMANVITALITY articles” button to visit the main publication.</p>
 </details>
 <details>
 <summary>Does HUMANVITALITY cover natural wellness?</summary>
@@ -3646,119 +3643,6 @@ if(e.key==='Enter')searchSite();
 
 });
 
-</script>
-
-
-<script>
-/* HUMANVITALITY: Blogger JSONP feed for automatic Latest + All Articles */
-(function(){
-  "use strict";
-  var BLOG_FEED = "https://humanvitalities.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=500&callback=hvBloggerFeedCallback";
-  var posts = [];
-  var activeCategory = "all";
-
-  function escapeHTML(value){
-    return String(value == null ? "" : value).replace(/[&<>"']/g, function(ch){
-      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;',"'" :"&#39;"}[ch];
-    });
-  }
-  function plainText(html){
-    var box = document.createElement("div");
-    box.innerHTML = html || "";
-    return (box.textContent || box.innerText || "").replace(/\s+/g," ").trim();
-  }
-  function postUrl(entry){
-    var links = entry.link || [];
-    for(var i=0;i<links.length;i++){
-      if(links[i].rel === "alternate" && links[i].href && /^https:\/\//i.test(links[i].href)){
-        return links[i].href;
-      }
-    }
-    return "";
-  }
-  function postImage(entry){
-    var media = entry["media$thumbnail"];
-    if(media && media.url) return media.url;
-    var content = entry.content && entry.content.$t ? entry.content.$t : "";
-    var match = content.match(/<img[^>]+src=["']([^"']+)["']/i);
-    return match ? match[1] : "";
-  }
-  function postLabels(entry){
-    var labels = (entry.category || []).map(function(item){return item.term;}).filter(Boolean);
-    return Array.from(new Set(labels));
-  }
-  function makePostCard(post){
-    var image = post.image ? '<img class="hv-article-thumb" src="' + escapeHTML(post.image) + '" alt="' + escapeHTML(post.title) + '" loading="lazy">' : "";
-    var labels = post.labels.length ? '<div class="hv-article-labels">' + post.labels.map(function(label){return '<span class="hv-article-label">' + escapeHTML(label) + '</span>';}).join("") + '</div>' : "";
-    var date = post.date ? '<div class="hv-article-meta">' + escapeHTML(post.date) + '</div>' : "";
-    return '<article class="hv-feature-card">' + image + date +
-      '<h3>' + escapeHTML(post.title) + '</h3>' +
-      '<p>' + escapeHTML(post.summary || "Read the full article on HUMANVITALITY.") + '</p>' +
-      labels +
-      '<a href="' + escapeHTML(post.url) + '" target="_blank" rel="noopener">Read Article →</a></article>';
-  }
-  function renderLatest(){
-    var target = document.getElementById("latestArticlesGrid");
-    if(!target) return;
-    if(!posts.length){target.innerHTML = '<p class="hv-feed-status">No published articles were found in the Blogger feed.</p>';return;}
-    target.innerHTML = posts.slice(0,6).map(makePostCard).join("");
-  }
-  function renderFilters(){
-    var target = document.getElementById("articleCategoryFilters");
-    if(!target) return;
-    var categories = Array.from(new Set(posts.reduce(function(all,post){return all.concat(post.labels);},[]))).sort(function(a,b){return a.localeCompare(b);});
-    target.innerHTML = '<button type="button" class="hv-category-filter' + (activeCategory === "all" ? " active" : "") + '" data-category="all">All Articles</button>' +
-      categories.map(function(label){
-        return '<button type="button" class="hv-category-filter' + (activeCategory === label ? " active" : "") + '" data-category="' + escapeHTML(label) + '">' + escapeHTML(label) + '</button>';
-      }).join("");
-  }
-  function renderAll(){
-    var target = document.getElementById("allArticlesGrid");
-    var count = document.getElementById("allArticlesCount");
-    if(!target) return;
-    var visible = activeCategory === "all" ? posts : posts.filter(function(post){return post.labels.indexOf(activeCategory) !== -1;});
-    if(count) count.textContent = visible.length + (visible.length === 1 ? " published article" : " published articles");
-    target.innerHTML = visible.length ? visible.map(makePostCard).join("") : '<p class="hv-feed-status">No articles found in this category.</p>';
-    renderFilters();
-  }
-  window.hvBloggerFeedCallback = function(data){
-    var entries = data && data.feed && data.feed.entry ? data.feed.entry : [];
-    posts = entries.map(function(entry){
-      var published = entry.published && entry.published.$t ? new Date(entry.published.$t) : null;
-      return {
-        title: entry.title && entry.title.$t ? entry.title.$t : "Untitled article",
-        url: postUrl(entry),
-        summary: plainText(entry.summary && entry.summary.$t ? entry.summary.$t : entry.content && entry.content.$t ? entry.content.$t : "").slice(0,180),
-        image: postImage(entry),
-        labels: postLabels(entry),
-        date: published && !isNaN(published.getTime()) ? published.toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"}) : ""
-      };
-    }).filter(function(post){return post.url;}).sort(function(a,b){return new Date(b.date) - new Date(a.date);});
-    renderLatest();
-    renderAll();
-  };
-  function showFeedError(){
-    ["latestArticlesGrid","allArticlesGrid"].forEach(function(id){
-      var node = document.getElementById(id);
-      if(node) node.innerHTML = '<p class="hv-feed-status">Articles could not be loaded right now. Please refresh the page or visit the <a href="https://humanvitalities.blogspot.com/" target="_blank" rel="noopener">original HUMANVITALITY blog</a>.</p>';
-    });
-  }
-  document.addEventListener("click",function(event){
-    var button = event.target.closest(".hv-category-filter");
-    if(!button) return;
-    activeCategory = button.getAttribute("data-category") || "all";
-    renderAll();
-  });
-  function loadFeed(){
-    var script = document.createElement("script");
-    script.src = BLOG_FEED;
-    script.async = true;
-    script.onerror = showFeedError;
-    document.head.appendChild(script);
-  }
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded",loadFeed);
-  else loadFeed();
-})();
 </script>
 
 </body>
