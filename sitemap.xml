@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://hennabynaaz007-star.github.io/smartdeals-humanvitality/</loc>
-</url>
-
+  <url>
+    <loc>https://hennabynaaz007-star.github.io/smartdeals-humanvitality/</loc>
+  </url>
+  <url>
+    <loc>https://hennabynaaz007-star.github.io/smartdeals-humanvitality/recipe-finder.html</loc>
+  </url>
+  <url>
+    <loc>https://hennabynaaz007-star.github.io/smartdeals-humanvitality/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://hennabynaaz007-star.github.io/smartdeals-humanvitality/disclaimer.html</loc>
+  </url>
+  <url>
+    <loc>https://hennabynaaz007-star.github.io/smartdeals-humanvitality/terms.html</loc>
+  </url>
 </urlset>
